@@ -18,7 +18,7 @@
 #define FTP_SERVER_CONFIG_H
 
 // Uncomment to enable printing out nice debug messages.
-// #define FTP_SERVER_DEBUG
+#define FTP_SERVER_DEBUG
 // #define FTP_ADDITIONAL_DEBUG
 
 // Define where debug output will be printed.
@@ -28,7 +28,7 @@
 #define STORAGE_SDFAT2 		2 	// Library SdFat version >= 2.0.2
 #define STORAGE_SPIFM  		3 	// Libraries Adafruit_SPIFlash and SdFat-Adafruit-Fork
 #define STORAGE_FATFS  		4 	// Library FatFs
-#define STORAGE_SD 			5 	// Standard SD library (suitable for Arduino esp8266 and esp32
+#define STORAGE_SD 		5 	// Standard SD library (suitable for Arduino esp8266 and esp32
 #define STORAGE_SPIFFS 		6 	// SPIFFS
 #define STORAGE_LITTLEFS 	7 	// LITTLEFS
 #define STORAGE_SEEED_SD 	8 	// Seeed_SD library
@@ -36,15 +36,15 @@
 #define STORAGE_SD_MMC		10 	// SD_MMC library
 
 #define NETWORK_ESP8266_ASYNC 	(1)
-#define NETWORK_ESP8266 		(2) 	// Standard ESP8266WiFi
+#define NETWORK_ESP8266 	(2) 	// Standard ESP8266WiFi
 #define NETWORK_ESP8266_242 	(3) 	// ESP8266WiFi before 2.4.2 core
-#define NETWORK_W5100 			(4)		// Standard Arduino Ethernet library
-#define NETWORK_ETHERNET		(4)		// Standard Arduino Ethernet library
-#define NETWORK_ENC28J60 		(5) 	// UIPEthernet library
-#define NETWORK_ESP32 			(6) 	// Standard WiFi library
-#define NETWORK_RP2040_WIFI		(15) 	// Raspberry Pi Pico W standard WiFi library
-#define NETWORK_ESP32_ETH 		(7)		// Standard ETH library
-#define NETWORK_WiFiNINA 		(8)		// Standard WiFiNINA library
+#define NETWORK_W5100 		(4)	// Standard Arduino Ethernet library
+#define NETWORK_ETHERNET	(4)	// Standard Arduino Ethernet library
+#define NETWORK_ENC28J60 	(5) 	// UIPEthernet library
+#define NETWORK_ESP32 		(6) 	// Standard WiFi library
+#define NETWORK_RP2040_WIFI	(15) 	// Raspberry Pi Pico W standard WiFi library
+#define NETWORK_ESP32_ETH 	(7)	// Standard ETH library
+#define NETWORK_WiFiNINA 	(8)	// Standard WiFiNINA library
 #define NETWORK_SEEED_RTL8720DN (9) 	// Standard SEED WiFi library
 #define NETWORK_ETHERNET_LARGE 	(10)
 #define NETWORK_ETHERNET_ENC 	(11)	// EthernetENC library (evolution of UIPEthernet
@@ -60,7 +60,7 @@
 // esp32 configuration
 #ifndef DEFAULT_FTP_SERVER_NETWORK_TYPE_ESP32
 	#define DEFAULT_FTP_SERVER_NETWORK_TYPE_ESP32 		NETWORK_ESP32
-	#define DEFAULT_STORAGE_TYPE_ESP32 					STORAGE_FFAT
+	#define DEFAULT_STORAGE_TYPE_ESP32 			STORAGE_SD
 	/**
 To use Ethernet.h with esp32 fix would be to change in Ethernet.h the line
 class EthernetServer : public Server {
